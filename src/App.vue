@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <!-- <HelloWorld msg="You did it!" /> -->
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -39,6 +39,10 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  border-bottom: 0.1rem solid;
+  border-color: rgb(244, 159, 28);
+  display: flex;
+  justify-content: space-evenly;
 }
 
 nav a.router-link-exact-active {
