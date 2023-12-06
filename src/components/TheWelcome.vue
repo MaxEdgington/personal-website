@@ -12,92 +12,47 @@ import HeroImg from '@/assets/1604438705335.jpg'
   <section class = "hero-background">
   <header>
     <img :src="HeroImg" alt="Image of Max">
-    <seciton class = "header-text"> 
-
-    </seciton>
+    <section class = "header-text"> 
+      <h1>Hello! I'm Max Edgington.</h1>
+      <h4> Embarking on a Journey in Web Development</h4>
+    </section>
   </header> 
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>Documentation</template>
 
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
-  </WelcomeItem>
 
   <WelcomeItem>
-    <template #icon>
-      <ToolingIcon />
-    </template>
-    <template #heading>Tooling</template>
+    <template #heading>
 
-    This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank" rel="noopener"
-      >Cypress Component Testing</a
-    >.
-
-    <br />
-
-    More instructions are available in <code>README.md</code>.
+    Newly minted from Lighthouse Labs, I'm passionate about crafting websites that weave together form and function with fresh, clean code. Join me on this exciting path as I grow, create, and connect through technology.
+     </template>
   </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <EcosystemIcon />
-    </template>
-    <template #heading>Ecosystem</template>
-
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <CommunityIcon />
-    </template>
-    <template #heading>Community</template>
-
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-    the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <SupportIcon />
-    </template>
-    <template #heading>Support Vue</template>
-
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
-  </WelcomeItem>
+ 
   </section>
 </template>
 
 
 <style scoped>
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px; /* Space between image and text */
+  padding: 20px;
+}
+
+
+.header-text h4 {
+  font-size: 1.2em; /* Adjust as needed */
+  color: #666; /* Example color */
+}
+
+.header-text h1 {
+  font-size: 2em; /* Adjust as needed */
+  margin-bottom: 0.5em; /* Spacing between the h1 and h4 */
+}
+
+
 .top-about-section {
   background-color: blue;
 
@@ -110,4 +65,17 @@ import HeroImg from '@/assets/1604438705335.jpg'
   
 
 }
+img{
+  width: 20%;
+  float: Left;
+  padding: 1%;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+}
+
 </style>
