@@ -72,17 +72,22 @@ header {
   align-items: center;
   justify-content: space-around;
   margin-top: 5rem;
+  gap: 2rem; /* Gap between image and text */
+  padding: 2rem; /* Padding around the section */
   /* Consistent top margin for sections */
 }
 
 .who-max img,
 .who-max div {
   flex: 1;
+  max-width: 50%;
 }
 
 .who-max img {
-  max-width: 100%;
+  display: block;
+  max-width: 40%;
   height: auto;
+  border-radius: 15px;
 }
 
 .custom-button {
