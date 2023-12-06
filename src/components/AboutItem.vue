@@ -17,6 +17,9 @@
     margin-top: 2rem;
     display: flex;
     position: relative;
+    border: 0.1rem solid;
+    border-color: rgba(244, 158, 28, 0.352);
+
 }
 
 .details {

@@ -1,6 +1,22 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView} from 'vue-router'
+
+import { onMounted } from 'vue'
 // import HelloWorld from './components/HelloWorld.vue'
+
+onMounted(() => {
+   const backgroundAudio = document.getElementById('background-audio');
+
+  if (backgroundAudio) {
+    backgroundAudio.play().catch(error => {
+      console.error('Audio playback failed:', error);
+      // Handle the error, maybe show a play button instead
+    });
+  } else {
+    console.error('Audio element not found');
+  }
+});
+
 </script>
 
 <template>
@@ -19,8 +35,9 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav>
     </div>
   </header>
-
+   <audio id="background-audio" src="/bandicam-2023-12-05-18-50-24-212_TJiZ7Mgy.mp3" preload="auto" style="display: none;" loop></audio>
   <RouterView />
+
 </template>
 
 <style scoped>
@@ -90,3 +107,4 @@ nav a:first-of-type {
   }
 } */
 </style>
+

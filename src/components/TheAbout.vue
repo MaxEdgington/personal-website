@@ -3,7 +3,8 @@ import AboutItem from './AboutItem.vue';
 import DocumentationIcon from './icons/IconDocumentation.vue';
 </script>
 
-<template>
+<template >
+    <section class ="top-about-section"> 
     <AboutItem>
 
         <!-- Taking out Documentation Icon  -->
@@ -16,7 +17,8 @@ import DocumentationIcon from './icons/IconDocumentation.vue';
         <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
         provides you with all information you need to get started.
     </AboutItem>
-
+    </section>
+    <section class = "bottom-about-section"> 
     <AboutItem>
         <!-- <template #icon>
             <ToolingIcon />
@@ -36,7 +38,9 @@ import DocumentationIcon from './icons/IconDocumentation.vue';
 
         More instructions are available in <code>README.md</code>.
     </AboutItem>
+    </section>
 
+    <section class = "bottom-about-section"> 
     <AboutItem>
         <!-- <template #icon>
             <EcosystemIcon />
@@ -52,36 +56,46 @@ import DocumentationIcon from './icons/IconDocumentation.vue';
         <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
         a visit.
     </AboutItem>
-
-    <AboutItem>
-        <!-- <template #icon>
-            <CommunityIcon />
-        </template> -->
-        <template #heading>Community</template>
-
-        Got stuck? Ask your question on
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-        Discord server, or
-        <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener">StackOverflow</a>. You
-        should also subscribe to
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-        the official
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-        twitter account for latest news in the Vue world.
-    </AboutItem>
-
-    <AboutItem>
-        <!-- <template #icon>
-            <SupportIcon />
-        </template> -->
-        <template #heading>Support Vue</template>
-
-        As an independent project, Vue relies on community backing for its sustainability. You can help
-        us by
-        <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
-    </AboutItem>
+    </section>
+   
 </template>
 
+
+<style scoped>
+
+.top-about-section {
+    background-color: blue;
+    
+}
+
+
+.bottom-about-section {
+    background-color: rgba(0, 89, 255, 0.671);
+    float: left;
+    width: 50%;
+
+}
+
+
+/* i {
+    display: flex;
+    place-items: center;
+    place-content: center;
+    width: 32px;
+    height: 32px;
+
+    color: var(--color-text);
+} */
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: var(--color-heading);
+}
+
+
+</style>
 
 
 <!--  About content from View -->

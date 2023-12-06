@@ -5,9 +5,17 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+import HeroImg from '@/assets/1604438705335.jpg'
 </script>
 
 <template>
+  <section class = "hero-background">
+  <header>
+    <img :src="HeroImg" alt="Image of Max">
+    <seciton class = "header-text"> 
+
+    </seciton>
+  </header> 
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
@@ -85,4 +93,21 @@ import SupportIcon from './icons/IconSupport.vue'
     us by
     <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
   </WelcomeItem>
+  </section>
 </template>
+
+
+<style scoped>
+.top-about-section {
+  background-color: blue;
+
+}
+
+
+.hero-background {
+  margin-top: 2%;
+  background-color: #FFFFFF;
+  
+
+}
+</style>
