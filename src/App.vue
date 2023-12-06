@@ -27,11 +27,15 @@ onMounted(() => {
       <!-- <HelloWorld msg="You did it!" /> -->
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/portfolio">Portfolio</RouterLink>
-        <RouterLink to="/blog">Blog</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
+        <section class="left-nav">
+        <RouterLink to="/">Max Edgington</RouterLink>
+        </section>
+        <section class="right-nav">
+        <RouterLink to="/about">Selected Work</RouterLink>
+        <RouterLink to="/contact">Resume</RouterLink>
+        <button>get in touch</button>
+        </section>
+
       </nav>
     </div>
   </header>

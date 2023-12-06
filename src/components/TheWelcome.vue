@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import WelcomeItem from './WelcomeItem.vue'
+import GetInTouch from './GetInTouch.vue'
 import DocumentationIcon from './icons/IconDocumentation.vue'
 import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
@@ -9,73 +10,95 @@ import HeroImg from '@/assets/1604438705335.jpg'
 </script>
 
 <template>
-  <section class = "hero-background">
   <header>
-    <img :src="HeroImg" alt="Image of Max">
-    <section class = "header-text"> 
-      <h1>Hello! I'm Max Edgington.</h1>
-      <h4> Embarking on a Journey in Web Development</h4>
+    <section class="header-text">
+      <h1>Hello! I'm Max Edgington [he/him]</h1>
+      <h4>Full-stack web developer with a side of community development, marketing and project management</h4>
     </section>
-  </header> 
+  </header>
 
-
-  <WelcomeItem>
-    <template #heading>
-
-    Newly minted from Lighthouse Labs, I'm passionate about crafting websites that weave together form and function with fresh, clean code. Join me on this exciting path as I grow, create, and connect through technology.
-     </template>
-  </WelcomeItem>
- 
+  <section class="who-max">
+    <img :src="HeroImg" alt="Image of Max">
+    <div>
+      <h2>Who is Max?</h2>
+      <p>Newly minted from Lighthouse Labs, I'm passionate about crafting websites that weave together form and function
+        with fresh, clean code. Join me on this exciting path as I grow, create, and connect through technology.</p>
+      <button class="custom-button">Get in Touch</button>
+    </div>
   </section>
+
+  <section class="selected-work">
+    <h2>Selected Work</h2>
+    <!-- Add your work items here -->
+  </section>
+
+  <section class="blog">
+    <h2>Latest Blog Post</h2>
+    <!-- Add your blog content here -->
+  </section>
+
+  <GetInTouch />
 </template>
 
 
-<style scoped>
 
+
+
+<style scoped>
 header {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 20px; /* Space between image and text */
-  padding: 20px;
-}
-
-
-.header-text h4 {
-  font-size: 1.2em; /* Adjust as needed */
-  color: #666; /* Example color */
+  min-height: 100vh;
+  /* Fill the viewport height */
 }
 
 .header-text h1 {
-  font-size: 2em; /* Adjust as needed */
-  margin-bottom: 0.5em; /* Spacing between the h1 and h4 */
+  font-size: 3.5em;
+  /* Larger font size for emphasis */
+  margin-bottom: 0.5em;
 }
 
-
-.top-about-section {
-  background-color: blue;
-
+.header-text h4 {
+  font-size: 1.2em;
+  color: #666;
 }
 
-
-.hero-background {
-  margin-top: 2%;
-  background-color: #FFFFFF;
-  
-
-}
-img{
-  width: 20%;
-  float: Left;
-  padding: 1%;
+.who-max,
+.selected-work,
+.blog {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5rem;
+  /* Consistent top margin for sections */
 }
 
+.who-max img,
+.who-max div {
+  flex: 1;
+}
+
+.who-max img {
+  max-width: 100%;
+  height: auto;
+}
+
+.custom-button {
+  background-color: #7EB2DD;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}
 
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-}
 
-</style>
+  .who-max,
+  .selected-work,
+  .blog {
+    flex-direction: column;
+    text-align: center;
+  }
+}</style>
