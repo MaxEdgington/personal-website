@@ -28,8 +28,26 @@ import HeroImg from '@/assets/1604438705335.jpg'
   </section>
 
   <section class="selected-work">
-    <h2>Selected Work</h2>
-    <!-- Add your work items here -->
+   <h2>Selected Work</h2>
+  <section class="work-row">
+    <!-- Pair 1 -->
+    <div class="work-item">
+      <div class="image-box"> <!-- Image/GIF here --> </div>
+      <div class="text-box">Description for item 1</div>
+    </div>
+
+    <!-- Pair 2 -->
+    <div class="work-item">
+      <div class="image-box"> <!-- Image/GIF here --> </div>
+      <div class="text-box">Description for item 2</div>
+    </div>
+
+    <!-- Pair 3 -->
+    <div class="work-item">
+      <div class="image-box"> <!-- Image/GIF here --> </div>
+      <div class="text-box">Description for item 3</div>
+    </div>
+  </section>
   </section>
 
   <section class="blog">
@@ -72,8 +90,10 @@ header {
   align-items: center;
   justify-content: space-around;
   margin-top: 5rem;
+  margin-bottom: 10rem;
   gap: 2rem; /* Gap between image and text */
   padding: 2rem; /* Padding around the section */
+
   /* Consistent top margin for sections */
 }
 
@@ -83,12 +103,46 @@ header {
   max-width: 50%;
 }
 
+.who-max p {
+  margin-bottom: 20px;
+  max-width: 60%;
+}
+
+.who-max h2 {
+  margin-bottom: 20px
+}
+
 .who-max img {
   display: block;
   max-width: 40%;
   height: auto;
   border-radius: 15px;
 }
+
+
+.work-row {
+  display: flex;
+  justify-content: space-between; /* Adjusts the space between the items */
+  gap: 20px; /* Adds space between items if they wrap */
+}
+
+.work-item {
+  flex-grow: 1; /* Allows each item to grow and take up equal space */
+  text-align: center; /* Centers text */
+}
+
+.image-box {
+  height: 200px; /* Example height, adjust as needed */
+  background-color: #ccc; /* Placeholder for image */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.text-box {
+  /* Style for the text box */
+  background-color: #eee; /* For visibility, can be changed */
+  padding: 10px;
+}
+
 
 .custom-button {
   background-color: #7EB2DD;
