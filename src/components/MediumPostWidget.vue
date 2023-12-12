@@ -1,3 +1,12 @@
+
+
+
+<template>
+    <div class="medium-post-widget">
+        <div class='sk-ww-medium-publication-feed' data-embed-id='240315'></div>
+    </div>
+</template>
+
 <script lang ="ts">
 export default {
     name: 'MediumPostWidget',
@@ -9,11 +18,3 @@ export default {
     }
 };
 </script>
-
-
-<template>
-    <div class="medium-post-widget">
-        <div class='sk-ww-medium-publication-feed' data-embed-id='240315'></div>
-    </div>
-</template>
-

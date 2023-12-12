@@ -63,7 +63,8 @@ console.log("Component script is running");
     <h2>Latest Blog Post</h2>
     <MediumPostWidget />
   </section>
-
+  
+  
   <GetInTouch />
 </template>
 
