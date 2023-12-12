@@ -9,6 +9,9 @@ import { ref, onMounted } from 'vue';
 import GetInTouch from './GetInTouch.vue'
 import MediumPostWidget from './MediumPostWidget.vue'
 import HeroImg from '@/assets/1604438705335.jpg'
+import appSite from '@/assets/appSite.jpg'
+import photoLabs from '@/assets/Photolabs1.jpg'
+import lens from '@/assets/lens.jpg'
 
 console.log("Component script is running");
 
@@ -38,19 +41,19 @@ console.log("Component script is running");
   <section class="work-row">
     <!-- Pair 1 -->
     <div class="work-item">
-      <div class="image-box"> <!-- Image/GIF here --> </div>
+      <div class="image-box"> <img :src="appSite" alt="Image of Astroparticle Physics Website"></div>
       <div class="text-box">Description for item 1</div>
     </div>
 
     <!-- Pair 2 -->
     <div class="work-item">
-      <div class="image-box"> <!-- Image/GIF here --> </div>
+      <div class="image-box"> <img :src="photoLabs" alt="Image of the Photo Labs website"></div>
       <div class="text-box">Description for item 2</div>
     </div>
 
     <!-- Pair 3 -->
     <div class="work-item">
-      <div class="image-box"> <!-- Image/GIF here --> </div>
+      <div class="image-box"> <img :src="lens" alt="Image of the Lens website"> </div>
       <div class="text-box">Description for item 3</div>
     </div>
   </section>
@@ -60,10 +63,10 @@ console.log("Component script is running");
   
 
   <section class="blog">
-    <h2>Latest Blog Post</h2>
-    <MediumPostWidget />
+     <h2>Latest Blog Post</h2>
+     <MediumPostWidget />
   </section>
-  
+
   
   <GetInTouch />
 </template>
@@ -93,8 +96,7 @@ header {
   color: #666;
 }
 
-.who-max,
-.blog {
+.who-max {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -146,19 +148,30 @@ header {
 
 .work-row {
   display: flex;
-  justify-content: space-between; /* Adjusts the space between the items */
-  gap: 20px; /* Adds space between items if they wrap */
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .work-item {
-  flex-grow: 1; /* Allows each item to grow and take up equal space */
-  text-align: center; /* Centers text */
+  flex-basis: calc(33.333% - 20px); /* Subtract the gap size */
+  flex-shrink: 0;
+  text-align: center;
 }
 
 .image-box {
-  height: 200px; /* Example height, adjust as needed */
-  background-color: #ccc; /* Placeholder for image */
-  margin-bottom: 10px; /* Space between image and text */
+  height: 200px;
+  background-color: #ccc;
+  margin-bottom: 10px;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+}
+
+.text-box {
+  background-color: #eee;
+  padding: 10px;
 }
 
 .text-box {
@@ -166,6 +179,25 @@ header {
   background-color: #eee; /* For visibility, can be changed */
   padding: 10px;
 }
+
+
+.blog {
+  display:block;
+  margin-top: 5rem;
+  /* margin-bottom: 10rem; */
+  gap: 2rem; /* Gap between image and text */
+  padding: 3rem; /* Padding around the section */
+  margin-bottom: 10rem;
+
+  /* Consistent top margin for sections */
+}
+
+.blog-content{
+
+  justify-content: center; /* Centers content horizontally */
+
+}
+
 
 
 .custom-button {
@@ -184,4 +216,9 @@ header {
     flex-direction: column;
     text-align: center;
   }
+
+  .work-item {
+    flex-basis: 100%;
+  }
+
 }</style>
