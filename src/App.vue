@@ -4,18 +4,42 @@ import { RouterLink, RouterView} from 'vue-router'
 import { onMounted } from 'vue'
 // import HelloWorld from './components/HelloWorld.vue'
 
-onMounted(() => {
-   const backgroundAudio = document.getElementById('background-audio');
 
-  if (backgroundAudio) {
-    backgroundAudio.play().catch(error => {
-      console.error('Audio playback failed:', error);
-      // Handle the error, maybe show a play button instead
-    });
-  } else {
-    console.error('Audio element not found');
-  }
-});
+
+// const fetchMediumPosts = () => {
+//   // Replace 'YOUR-USERNAME' with your actual Medium username
+//   const data = { rss: 'https://medium.com/feed/@edgington.m.w' };
+//   const rss2jsonURL = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@edgington.m.w&api_key=nquyykmck7klltw12gjflhpmx4psuby8vvrnvdhq'; // Replace with your RSS2JSON service URL
+
+//   return new Promise((resolve) => {
+//     $.get(rss2jsonURL, data, function(response) {
+//       if (response.status === 'ok') {
+//         let renderContent = '';
+//         // Process and render content...
+//         // Set the content to some state or directly to the DOM
+//         $('#rss2json').html(renderContent);
+//         resolve();
+//       }
+//       console.log(response)
+//     });
+//   });
+// };
+
+
+// onMounted(() => {
+//    const backgroundAudio = document.getElementById('background-audio');
+
+//   if (backgroundAudio) {
+//     backgroundAudio.play().catch(error => {
+//       console.error('Audio playback failed:', error);
+//       // Handle the error, maybe show a play button instead
+//     });
+//   } else {
+//     console.error('Audio element not found');
+//   }
+
+//   // fetchMediumPosts(); // Fetch and display Medium posts
+// });
 
 </script>
 
@@ -39,7 +63,7 @@ onMounted(() => {
       </nav>
     </div>
   </header>
-   <audio id="background-audio" src="/bandicam-2023-12-05-18-50-24-212_TJiZ7Mgy.mp3" preload="auto" style="display: none;" loop></audio>
+   <!-- <audio id="background-audio" src="/bandicam-2023-12-05-18-50-24-212_TJiZ7Mgy.mp3" preload="auto" style="display: none;" loop></audio> -->
   <RouterView />
 
 </template>

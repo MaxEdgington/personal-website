@@ -1,12 +1,18 @@
 <script setup lang="ts">
-import WelcomeItem from './WelcomeItem.vue'
+
+import { onBeforeMount } from 'vue';
+
+onBeforeMount(() => {
+  console.log("Before component mounts");
+  });
+import { ref, onMounted } from 'vue';
 import GetInTouch from './GetInTouch.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
+import MediumPostWidget from './MediumPostWidget.vue'
 import HeroImg from '@/assets/1604438705335.jpg'
+
+console.log("Component script is running");
+
+
 </script>
 
 <template>
@@ -23,7 +29,7 @@ import HeroImg from '@/assets/1604438705335.jpg'
       <h2>Who is Max?</h2>
       <p>Newly minted from Lighthouse Labs, I'm passionate about crafting websites that weave together form and function
         with fresh, clean code. Join me on this exciting path as I grow, create, and connect through technology.</p>
-      <button class="custom-button">Get in Touch</button>
+      <button class="custom-button">get in touch</button>
     </div>
   </section>
 
@@ -48,11 +54,14 @@ import HeroImg from '@/assets/1604438705335.jpg'
       <div class="text-box">Description for item 3</div>
     </div>
   </section>
+    <button class="custom-button">see more</button>
+
   </section>
+  
 
   <section class="blog">
     <h2>Latest Blog Post</h2>
-    <!-- Add your blog content here -->
+    <MediumPostWidget />
   </section>
 
   <GetInTouch />
@@ -84,7 +93,6 @@ header {
 }
 
 .who-max,
-.selected-work,
 .blog {
   display: flex;
   align-items: center;
@@ -119,6 +127,21 @@ header {
   border-radius: 15px;
 }
 
+
+.selected-work {
+  margin-bottom: 10rem;
+  padding: 2rem;
+}
+
+.selected-work h2 {
+  margin-bottom: 2rem;
+}
+
+.selected-work .custom-button {
+  display: block; /* Make the button a block element */
+  margin: 30px auto; /* Vertical margin and automatic horizontal margin for centering */
+  padding: 10px 20px; /* Button padding */
+}
 
 .work-row {
   display: flex;
